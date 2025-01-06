@@ -1,4 +1,7 @@
-﻿using SweetSugar.Scripts.TargetScripts;
+﻿#if SAFT2
+using SweetSugar.Scripts.Level;
+#endif
+using SweetSugar.Scripts.TargetScripts;
 
 namespace NoMatch3;
 
@@ -9,9 +12,16 @@ public class CollectItemsTargetPatched(CollectItems originalTarget) : CollectIte
         return originalTarget.CountTargetSublevel();
     }
 
+#if SAFT2
+    
+    public override void InitTarget(LevelData levelData)
+    {
+        originalTarget.InitTarget(levelData);
+#else
     public override void InitTarget()
     {
         originalTarget.InitTarget();
+#endif
         amount = 1;
         destAmount = 1;
     }

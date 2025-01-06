@@ -4,10 +4,14 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
-	  <GamePath>\\leviathan\Love Stories FT</GamePath>
+	  <GamePath>\\leviathan\Sex and the Furry Titty 2</GamePath>
       <OutputPath>$(GamePath)\BepInEx\plugins\NoMatch3</OutputPath>
       <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
       <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);SAFT2</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,15 +26,15 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
 		<Private>false</Private>
-		<HintPath>$(GamePath)\Sex And The Furry Titty_Data\Managed\Assembly-CSharp.dll</HintPath>
+		<HintPath>$(GamePath)\Furry Titty 2_Data\Managed\Assembly-CSharp.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEngine.CoreModule">
 		<Private>false</Private>
-		<HintPath>$(GamePath)\Sex And The Furry Titty_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		<HintPath>$(GamePath)\Furry Titty 2_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEngine.UI">
 		<Private>false</Private>
-      <HintPath>$(GamePath)\Sex And The Furry Titty_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(GamePath)\Furry Titty 2_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
 
