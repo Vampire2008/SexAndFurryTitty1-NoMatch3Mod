@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using SweetSugar.Scripts.Core;
@@ -8,13 +9,14 @@ using SweetSugar.Scripts.TargetScripts.TargetSystem;
 namespace NoMatch3
 {
     [BepInPlugin(modGuid, "NoMatch3", "1.1.0")]
-    public class NoMatch3Patcher : BaseUnityPlugin
+    public partial class NoMatch3Patcher : BaseUnityPlugin
     {
         private const string modGuid = "cf53df4f-3cd5-42a2-91bb-640606a25637";
 
         private readonly Harmony _harmony = new(modGuid);
         private static NoMatch3Patcher? Instance;
         private static ManualLogSource _logger;
+        private static Config _config;
 
         private void Awake()
         {
@@ -22,6 +24,7 @@ namespace NoMatch3
             _logger = BepInEx.Logging.Logger.CreateLogSource("NoMatch3");
             _harmony.PatchAll(typeof(NoMatch3Patcher));
             _logger.LogInfo("Patched");
+            _config = new Config(Config);
         }
 
         [HarmonyPatch(typeof(NovelTreeScreenController), nameof(NovelTreeScreenController.refreshStoryModeToggleAndSyncVariable))]
@@ -29,9 +32,10 @@ namespace NoMatch3
         private static void MakeStoryModeAlwaysVisibleAndSetByDefault(NovelTreeScreenController __instance)
         {
             __instance.checkBoxToggle.gameObject.SetActive(true);
-            __instance.checkBoxToggle.isOn = true;
+            __instance.checkBoxToggle.isOn = _config.StoryModeEnabled;
             __instance.onToggleChange();
             _logger.LogInfo("Checkbox Enabled");
+            _logger.LogInfo($"StoryMode is set to {_config.StoryModeEnabled}");
         }
 
         [HarmonyPatch(typeof(LevelManager), nameof(LevelManager.LoadLevel), [])]
@@ -53,6 +57,13 @@ namespace NoMatch3
                 _logger.LogDebug($"Target extra type is {__instance.levelData.targetObjectExtra.GetType().Name}");
                 __instance.levelData.targetObjectExtra = PatchTarget(__instance.levelData.targetObjectExtra);
             }
+        }
+
+        [HarmonyPatch(typeof(TargetCounter), nameof(TargetCounter.IsTotalTargetReached))]
+        [HarmonyPostfix]
+        private static void TargetCounterAlwaysWin(ref bool __result)
+        {
+            __result = true;
         }
 
         private static Target PatchTarget(Target target)
