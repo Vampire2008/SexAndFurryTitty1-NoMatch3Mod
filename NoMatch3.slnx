@@ -1,0 +1,112 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Lizard-Debug" />
+    <BuildType Name="Lizard-Release" />
+    <BuildType Name="Lizard2-Debug" />
+    <BuildType Name="Lizard2-Release" />
+    <BuildType Name="Release" />
+    <BuildType Name="SaFT1-Debug" />
+    <BuildType Name="SaFT1-Release" />
+    <BuildType Name="SaFT2-Debug" />
+    <BuildType Name="SaFT2-Release" />
+    <BuildType Name="SaFT3-Debug" />
+    <BuildType Name="SaFT3-Release" />
+  </Configurations>
+  <Folder Name="/Элементы решения/">
+    <File Path="Nuget.config" />
+  </Folder>
+  <Project Path="Lizard-NoMatch3/Lizard-NoMatch3.csproj">
+    <BuildType Solution="Lizard-Debug|*" Project="Debug" />
+    <BuildType Solution="Lizard-Release|*" Project="Release" />
+    <BuildType Solution="Lizard2-Debug|*" Project="Debug" />
+    <BuildType Solution="Lizard2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT1-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT1-Release|*" Project="Release" />
+    <BuildType Solution="SaFT2-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT3-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT3-Release|*" Project="Release" />
+    <Build Solution="Lizard2-Debug|*" Project="false" />
+    <Build Solution="Lizard2-Release|*" Project="false" />
+    <Build Solution="SaFT1-Debug|*" Project="false" />
+    <Build Solution="SaFT1-Release|*" Project="false" />
+    <Build Solution="SaFT2-Debug|*" Project="false" />
+    <Build Solution="SaFT2-Release|*" Project="false" />
+    <Build Solution="SaFT3-Debug|*" Project="false" />
+    <Build Solution="SaFT3-Release|*" Project="false" />
+  </Project>
+  <Project Path="Lizard2_NoMatch3/Lizard2_NoMatch3.csproj" Id="bc9ba053-9a74-47f4-9ea9-d8357fd38428">
+    <BuildType Solution="Lizard-Debug|*" Project="Release" />
+    <BuildType Solution="Lizard-Release|*" Project="Release" />
+    <BuildType Solution="Lizard2-Debug|*" Project="Release" />
+    <BuildType Solution="Lizard2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT1-Debug|*" Project="Release" />
+    <BuildType Solution="SaFT1-Release|*" Project="Release" />
+    <BuildType Solution="SaFT2-Debug|*" Project="Release" />
+    <BuildType Solution="SaFT2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT3-Debug|*" Project="Release" />
+    <BuildType Solution="SaFT3-Release|*" Project="Release" />
+  </Project>
+  <Project Path="NoMatch3.Shared/NoMatch3.Shared.shproj" />
+  <Project Path="NoMatch3/NoMatch3.csproj">
+    <BuildType Solution="Lizard-Debug|*" Project="Debug" />
+    <BuildType Solution="Lizard-Release|*" Project="Release" />
+    <BuildType Solution="Lizard2-Debug|*" Project="Debug" />
+    <BuildType Solution="Lizard2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT1-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT1-Release|*" Project="Release" />
+    <BuildType Solution="SaFT2-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT3-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT3-Release|*" Project="Release" />
+    <Build Solution="Lizard-Debug|*" Project="false" />
+    <Build Solution="Lizard-Release|*" Project="false" />
+    <Build Solution="Lizard2-Debug|*" Project="false" />
+    <Build Solution="Lizard2-Release|*" Project="false" />
+    <Build Solution="SaFT2-Debug|*" Project="false" />
+    <Build Solution="SaFT2-Release|*" Project="false" />
+    <Build Solution="SaFT3-Debug|*" Project="false" />
+    <Build Solution="SaFT3-Release|*" Project="false" />
+  </Project>
+  <Project Path="SaFT2-NoMatch3/SaFT2-NoMatch3.csproj">
+    <BuildType Solution="Lizard-Debug|*" Project="Debug" />
+    <BuildType Solution="Lizard-Release|*" Project="Release" />
+    <BuildType Solution="Lizard2-Debug|*" Project="Debug" />
+    <BuildType Solution="Lizard2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT1-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT1-Release|*" Project="Release" />
+    <BuildType Solution="SaFT2-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT3-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT3-Release|*" Project="Release" />
+    <Build Solution="Lizard-Debug|*" Project="false" />
+    <Build Solution="Lizard-Release|*" Project="false" />
+    <Build Solution="Lizard2-Debug|*" Project="false" />
+    <Build Solution="Lizard2-Release|*" Project="false" />
+    <Build Solution="SaFT1-Debug|*" Project="false" />
+    <Build Solution="SaFT1-Release|*" Project="false" />
+    <Build Solution="SaFT3-Debug|*" Project="false" />
+    <Build Solution="SaFT3-Release|*" Project="false" />
+  </Project>
+  <Project Path="SaFT3-NoMatch3/SaFT3-NoMatch3.csproj">
+    <BuildType Solution="Lizard-Debug|*" Project="Debug" />
+    <BuildType Solution="Lizard-Release|*" Project="Release" />
+    <BuildType Solution="Lizard2-Debug|*" Project="Debug" />
+    <BuildType Solution="Lizard2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT1-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT1-Release|*" Project="Release" />
+    <BuildType Solution="SaFT2-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT2-Release|*" Project="Release" />
+    <BuildType Solution="SaFT3-Debug|*" Project="Debug" />
+    <BuildType Solution="SaFT3-Release|*" Project="Release" />
+    <Build Solution="Lizard-Debug|*" Project="false" />
+    <Build Solution="Lizard-Release|*" Project="false" />
+    <Build Solution="Lizard2-Debug|*" Project="false" />
+    <Build Solution="Lizard2-Release|*" Project="false" />
+    <Build Solution="SaFT1-Debug|*" Project="false" />
+    <Build Solution="SaFT1-Release|*" Project="false" />
+    <Build Solution="SaFT2-Debug|*" Project="false" />
+    <Build Solution="SaFT2-Release|*" Project="false" />
+  </Project>
+</Solution>

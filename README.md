@@ -1,4 +1,6 @@
-# No Match 3 mod for games Sex and Furry Titty (1, 2), Humans are not that against Lizardwomen
+[Русский](./README.ru.md) | **English**
+
+# No Match 3 mod for games Sex and Furry Titty (1, 2, 3), Humans are not that against Lizardwomen (1, 2)
 
 This mod enable story mod by default if event it not unlocked. And simplify match 3 game that can be win with 1-2 steps.
 
@@ -10,7 +12,9 @@ Note: game folder is:
 
 * SaFT 1 - `Love Stories FT`
 * SaFT 2 - `Sex and the Furry Titty 2`
+* SaFT 3 - `Sex and the Furry Titty 3`
 * Humans are not that against Lizardwomen - `Lizardwomen`
+* Humans are not that against Lizardwomen 2 - `Lizardwomen 2`
 
 This mod shipped with Bepinex engine.
 

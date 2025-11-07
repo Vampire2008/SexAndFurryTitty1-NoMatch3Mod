@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<AssemblyName>Lizard2_NoMatch3</AssemblyName>
+		<Product>Remove annoing match-3 game</Product>
+		<Version>1.0.0</Version>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<LangVersion>latest</LangVersion>
+		<RestoreAdditionalProjectSources>
+			https://api.nuget.org/v3/index.json;
+			https://nuget.bepinex.dev/v3/index.json;
+			https://nuget.samboy.dev/v3/index.json
+		</RestoreAdditionalProjectSources>
+		<RootNamespace>Lizard2_NoMatch3</RootNamespace>
+		<GamePath>C:\Program Files (x86)\Steam\steamapps\common\lizardwomen 2\Lizardwomen 2</GamePath>
+		<OutputPath>$(GamePath)\BepInEx\plugins\NoMatch3</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<Private>false</Private>
+			<HintPath>$(GamePath)\BepInEx\interop\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<Private>false</Private>
+			<HintPath>$(GamePath)\BepInEx\interop\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<Private>false</Private>
+			<HintPath>$(GamePath)\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppmscorlib">
+			<Private>false</Private>
+			<HintPath>$(GamePath)\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.*" IncludeAssets="compile" />
+		<PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+	</ItemGroup>
+</Project>
