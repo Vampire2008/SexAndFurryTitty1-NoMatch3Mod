@@ -1,5 +1,4 @@
 ﻿using BepInEx;
-using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 using SweetSugar.Scripts.Core;
@@ -59,12 +58,38 @@ namespace NoMatch3
             }
         }
 
+        [HarmonyPatch(typeof(CollectItems), nameof(CollectItems.IsTotalTargetReached))]
+        [HarmonyPostfix]
+        private static void CollectItemsAlwaysWin(ref bool __result)
+        {
+            __result = true;
+        }
+
+        [HarmonyPatch(typeof(JellyBlock), nameof(JellyBlock.IsTotalTargetReached))]
+        [HarmonyPostfix]
+        private static void JellyBlockTargetAlwaysWin(ref bool __result)
+        {
+            _logger.LogDebug("JellyBlock IsTotalTargetReached called");
+            __result = true;
+        }
+        
+        [HarmonyPatch(typeof(JellyBlock), nameof(JellyBlock.IsTargetReachedSublevel))]
+        [HarmonyPostfix]
+        private static void JellyBlockSubTargetAlwaysWin(ref bool __result)
+        {
+            _logger.LogDebug("JellyBlock IsTargetReachedSublevel called");
+            __result = true;
+        }
+
+#if SAFT2
         [HarmonyPatch(typeof(TargetCounter), nameof(TargetCounter.IsTotalTargetReached))]
         [HarmonyPostfix]
         private static void TargetCounterAlwaysWin(ref bool __result)
         {
+            _logger.LogDebug("TargetCounter IsTotalTargetReached called");
             __result = true;
         }
+#endif
 
         private static Target PatchTarget(Target target)
         {
